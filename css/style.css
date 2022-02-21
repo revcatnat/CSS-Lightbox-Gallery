@@ -33,6 +33,17 @@ h1 {
 	overflow: hidden;
 	border: 5px solid #666;
 	float: left;
+	margin-right: 10px;
+}
+
+.gallery li img {
+	border-radius: 50%;
+}
+
+.gallery li span {
+	display: block;
+	color: rgba(200, 200, 200, 0.5);
+	border-radius: 50%;
 }
 
 .clear {
