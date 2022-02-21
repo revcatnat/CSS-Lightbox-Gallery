@@ -66,3 +66,62 @@ h1 {
 .clear {
 	clear: both;
 }
+
+/* Overlay */
+.overlay {
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0);
+	z-index: 9999;
+	transition: 0.5s;
+	text-align: center;
+	padding: 100px 0px;
+}
+
+.overlay:target {
+	width: auto;
+	height: auto;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.overlay img {
+	max-height: 100%;
+}
+
+.overlay:target img {
+	border-radius: 0;
+	box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.25);
+	animation: zoomFade 1s;
+}
+
+.overlay .close {
+	position: absolute;
+	left: 49%;
+	top: 50px;
+	color: white;
+	text-decoration: none;
+	background-color: black;
+	border: 1px solid white;
+	line-height: 14x;
+	padding: 0px 5px;
+}
+
+/* Animation */
+
+@keyframes zoomFade {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
