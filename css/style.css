@@ -117,6 +117,28 @@ h1 {
 	animation: slideDownFade 0.5s 1s forwards;
 }
 
+.overlay:target .next,
+.overlay:target .prev {
+	animation: fade 0.5s 1s forwards;
+}
+/* navigation */
+.next,
+.prev {
+	width: 95px;
+	height: 76px;
+	background-image: url("../img/arrow/arrowRight.png");
+	position: absolute;
+	text-indent: -9999px;
+	top: 40%;
+	margin-left: 50px;
+	opacity: 0;
+}
+
+.prev {
+	background-image: url("../img/arrow/arrowLeft.png");
+	margin-left: -150px;
+}
+
 /* Animation */
 
 @keyframes zoomFade {
@@ -141,3 +163,13 @@ h1 {
 		margin-top: 0;
 	}
 }
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+} ;
