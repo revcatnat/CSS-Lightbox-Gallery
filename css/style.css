@@ -113,6 +113,10 @@ h1 {
 	opacity: 0;
 }
 
+.overlay:target .close {
+	animation: slideDownFade 0.5s 1s forwards;
+}
+
 /* Animation */
 
 @keyframes zoomFade {
